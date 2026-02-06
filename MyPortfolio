@@ -1,222 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wan Danial Aiman | Cybersecurity Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #111; /* black background */
-      color: #fff; /* white text */
-      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0b0f14;
+      color: #e5e7eb;
     }
     header {
-      background: #222; /* dark grey */
-      color: #fff;
-      padding: 2rem 1rem;
+      padding: 60px 20px;
       text-align: center;
-      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+      background: radial-gradient(circle at top, #111827, #020617);
     }
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.3rem;
-      color: #fff;
-      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
     }
     header p {
-      margin: 0.3rem 0;
-      font-weight: 600;
-    }
-    a {
-      color: #ddd; /* light grey */
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      color: #9ca3af;
+      max-width: 720px;
+      margin: auto;
     }
     section {
-      margin-bottom: 3rem;
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
     }
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.2rem;
-      border-bottom: 3px solid #fff;
-      padding-bottom: 0.5rem;
-      color: #fff;
-      font-weight: 700;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    .project {
-      background: #333; /* dark grey */
-      padding: 1.8rem;
-      border-radius: 14px;
-      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
-      margin-bottom: 1.5rem;
-      color: #fff;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .project:hover {
-      transform: scale(1.02);
-      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
-    }
-    .btn-github {
-      display: inline-block;
-      background-color: #444; /* medium grey */
-      color: #fff;
-      padding: 0.65rem 1.3rem;
-      border-radius: 10px;
-      font-weight: 700;
-      margin-top: 1rem;
-      text-decoration: none;
-      box-shadow: 0 0 12px #444;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .btn-github:hover {
-      background-color: #fff;
-      color: #111;
-      box-shadow: 0 0 20px #fff;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      border-left: 4px solid #22d3ee;
+      padding-left: 12px;
     }
     .bubble {
-      background: #444; /* medium grey */
-      padding: 1.3rem 1.7rem;
-      border-radius: 18px;
-      margin-bottom: 1.2rem;
-      max-width: 700px;
-      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
-      position: relative;
-      opacity: 0;
-      animation: fadeIn 1s ease forwards;
-      border-left: 5px solid #fff;
-      color: #fff;
-      font-weight: 600;
-    }
-    .bubble::before {
-      content: '';
-      position: absolute;
-      top: 22px;
-      left: -13px;
-      width: 0;
-      height: 0;
-      border: 12px solid transparent;
-      border-right-color: #444;
-    }
-    .bubble:nth-child(2) {
-      animation-delay: 0.35s;
-    }
-    .bubble:nth-child(3) {
-      animation-delay: 0.85s;
-    }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+      background: #020617;
+      border: 1px solid #1f2937;
+      padding: 20px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 25px rgba(34,211,238,0.05);
     }
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1.2rem;
+      gap: 15px;
     }
     .skill-item {
-      background-color: #555; /* grey */
-      border: 2px solid #fff;
-      color: #fff;
-      padding: 0.85rem 1.3rem;
-      border-radius: 10px;
+      background: linear-gradient(145deg, #020617, #020617);
+      border: 1px solid #1f2937;
+      padding: 14px;
       text-align: center;
-      font-weight: 700;
-      box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);
-      transition: background-color 0.3s ease;
-      cursor: default;
-      user-select: none;
+      border-radius: 14px;
+      transition: 0.3s;
     }
     .skill-item:hover {
-      background-color: #fff;
-      color: #111;
-      box-shadow: 0 5px 20px #fff;
+      border-color: #22d3ee;
+      transform: translateY(-3px);
+    }
+    .project {
+      background: #020617;
+      border: 1px solid #1f2937;
+      padding: 25px;
+      border-radius: 18px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 35px rgba(34,211,238,0.06);
+    }
+    .project h3 {
+      margin-top: 0;
+    }
+    .btn-github {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 18px;
+      background: #020617;
+      border: 1px solid #22d3ee;
+      border-radius: 12px;
+      color: #22d3ee;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn-github:hover {
+      background: #22d3ee;
+      color: #020617;
     }
     footer {
       text-align: center;
-      padding: 1.8rem;
-      font-size: 0.95rem;
-      color: #888; /* lighter grey */
-      border-top: 1px solid #333;
-      margin-top: 3rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
+      padding: 40px 20px;
+      color: #6b7280;
+      border-top: 1px solid #1f2937;
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Wan Danial Aiman Bin Niraazwan</h1>
-    <p>Email: <a href="mailto:wan.danial.azwan@gmail.com">wan.danial.azwan@gmail.com</a></p>
-    <p><a href="https://www.linkedin.com/in/wan-danial-aiman-bin-niraazwan-1b917b368" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
-    <a class="btn-github" href="DanialResumeLatest.pdf" download>Download My Resume (PDF)</a>
-  </header>
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="bubble">
-        Hi, I'm Wan Danial Aiman — someone who's really passionate about cybersecurity. I enjoy exploring how systems work, especially when it comes to detecting threats and understanding log data. I’ve completed certifications like Google Cybersecurity, Certified in Cybersecurity (ISC2), dan juga CISSP as part of my journey.
-      </div>
-      <div class="bubble">
-        Most of the time, I focus on scripting tools that help analyze and improve system security. I'm still learning and growing every day, and I'm excited to gain more hands-on experience in real-world cybersecurity environments.
-      </div>
-    </section>
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Google Cybersecurity (Coursera)</li>
-        <li>CISSP</li>
-        <li>Certified in Cybersecurity (ISC2)</li>
-        <li>Python Development</li>
-        <li>CompTIA A +</li>
-        <li>Introduction To CIP</li>
-      </ul>
-    </section>
-    <section id="completion">
-      <h2>Completion</h2>
-      <ul>
-        <li>HRD CORP e Latih (Cybersecurity Course)</li>
-      </ul>
-    </section>
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-item">Cyber Threat Intelligence</div>
-        <div class="skill-item">Operating System</div>
-        <div class="skill-item">Data Security</div>
-        <div class="skill-item">Encryption</div>
-      </div>
-    </section>
-    <section id="projects">
-      <h2>Featured Project</h2>
-      <div class="project">
-        <h3>🔐 Shinyeureka – SSH Log Parser</h3>
-        <p>Python-based tool to analyze <code>auth.log</code> files from Linux systems and detect brute-force SSH login attempts. Utilizes regular expressions to extract malicious IP addresses and outputs a structured CSV report.</p>
-        <a class="btn-github" href="https://github.com/AnonNazi431/shiny-eureka" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>© 2025 Wan Danial Aiman Bin Niraazwan. All rights reserved.</p>
-  </footer>
-</body>
+<body><header>
+  <h1>Wan Danial Aiman</h1>
+  <p>Cybersecurity Enthusiast • Raspberry Pi Lab Builder • Security Automation Developer</p>
+</header><section id="about">
+  <h2>About Me</h2>
+  <div class="bubble">
+    Hi, I'm Wan Danial Aiman — passionate about cybersecurity with a strong focus on hands-on experimentation. I specialize in building cybersecurity labs using Raspberry Pi 5, developing automation scripts for web reconnaissance, and integrating Telegram bots for real-time security monitoring and alerts.
+  </div>
+  <div class="bubble">
+    My interests include SOC operations, threat detection, and ethical hacking. I enjoy turning theoretical security concepts into practical tools and continuously improving my skills through lab-based learning and real-world simulations.
+  </div>
+</section><section id="skills">
+  <h2>Skills & Tools</h2>
+  <div class="skills-grid">
+    <div class="skill-item">Raspberry Pi 5 Cyber Lab</div>
+    <div class="skill-item">Linux & Networking</div>
+    <div class="skill-item">Web Reconnaissance</div>
+    <div class="skill-item">Vulnerability Assessment</div>
+    <div class="skill-item">Python Automation</div>
+    <div class="skill-item">Telegram Bot Integration</div>
+    <div class="skill-item">Nuclei</div>
+    <div class="skill-item">SQLmap</div>
+    <div class="skill-item">ParamSpider</div>
+    <div class="skill-item">Burp Suite</div>
+    <div class="skill-item">WireGuard / TOR</div>
+    <div class="skill-item">Log Analysis & Threat Detection</div>
+  </div>
+</section><section id="projects">
+  <h2>Featured Projects</h2>  <div class="project">
+    <h3>🔐 Shinyeureka – SSH Log Parser</h3>
+    <p>Python-based tool designed to analyze Linux <code>auth.log</code> files to detect brute-force SSH login attempts. Extracts malicious IP addresses using regex and exports structured CSV reports for further analysis.</p>
+    <a class="btn-github" href="https://github.com/AnonNazi431/shiny-eureka" target="_blank">View on GitHub</a>
+  </div>  <div class="project">
+    <h3>🖥️ Raspberry Pi 5 Cybersecurity Lab</h3>
+    <p>Designed and deployed a Raspberry Pi 5–based cybersecurity lab for web reconnaissance, vulnerability scanning, and threat monitoring. Optimized tools for ARM architecture and automated workflows using Python scripts.</p>
+  </div>  <div class="project">
+    <h3>🤖 Security Automation & Telegram Bots</h3>
+    <p>Developed custom Telegram bots to trigger reconnaissance scans, monitor system activity, and deliver summarized security alerts. Enables SOC-style monitoring and remote control of lab operations.</p>
+  </div>
+</section><section id="certifications">
+  <h2>Certifications</h2>
+  <div class="bubble">Google Professional Cybersecurity</div>
+  <div class="bubble">Certified in Cybersecurity (ISC2)</div>
+  <div class="bubble">CISSP</div>
+  <div class="bubble">CompTIA A+</div>
+  <div class="bubble">Cisco Ethical Hacking</div>
+  <div class="bubble">Linux and Private Cloud Administration on IBM Power Systems</div>
+  <div class="bubble">Fortinet Certified Associate / Certified Cybersecurity</div>
+</section><section id="accomplishments">
+  <h2>Accomplishments & Activities</h2>
+  <div class="bubble">Participant, Siber Siaga 2025 – National Cybersecurity Competition</div>
+  <div class="bubble">Developed custom cybersecurity tools for web security testing and reconnaissance</div>
+  <div class="bubble">Built and maintained a Raspberry Pi 5–based cybersecurity lab environment</div>
+  <div class="bubble">Automated security testing workflows using Telegram bot integration</div>
+  <div class="bubble">Built personal websites and small web applications</div>
+</section><footer>
+  © 2026 Wan Danial Aiman • Cybersecurity Portfolio
+</footer></body>
 </html>
